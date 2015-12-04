@@ -13,10 +13,10 @@ Bomberman.Enemy = function (game_state, name, position, properties) {
     
     this.previous_position = (this.axis === "x") ? this.x : this.y;
     
-    this.animations.add("walking_down", [1, 2, 3], 10, true);
-    this.animations.add("walking_left", [4, 5, 6, 7], 10, true);
-    this.animations.add("walking_right", [4, 5, 6, 7], 10, true);
-    this.animations.add("walking_up", [0, 8, 9], 10, true);
+    this.animations.add("walking_down", [0, 1, 2], 10, true);
+    this.animations.add("walking_left", [6, 7, 8], 10, true);
+    this.animations.add("walking_right", [6, 7, 8], 10, true);
+    this.animations.add("walking_up", [3, 4, 5], 10, true);
     
     this.stopped_frames = [1, 4, 4, 0, 1];
     

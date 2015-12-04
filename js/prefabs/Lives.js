@@ -1,13 +1,13 @@
 var Bomberman = Bomberman || {};
 
 Bomberman.Lives = function (game_state, name, position, properties) {
-	"use strict";
-	var lives_text_position, lives_text_style, lives_text_properties;
-	Bomerman.Prefab.call(this, game_state, name, position, properties);
-
-	this.fixedToCamera = true;
-
-	this.anchor.setTo(0.5);
+    "use strict";
+    var lives_text_position, lives_text_style, lives_text_properties;
+    Bomberman.Prefab.call(this, game_state, name, position, properties);
+    
+    this.fixedToCamera = true;
+    
+    this.anchor.setTo(0.5);
     this.scale.setTo(0.9);
     
     // create a text prefab to show the number of lives
@@ -25,5 +25,4 @@ Bomberman.Lives.prototype.update = function () {
     "use strict";
     // update to show current number of lives
     this.lives_text.text = this.game_state.prefabs.player.number_of_lives;
-    console.log("Current Lives: " + this.lives_text.text);
 };

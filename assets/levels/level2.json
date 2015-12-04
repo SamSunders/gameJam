@@ -9,13 +9,14 @@
         "target_image": {"type": "image", "source": "assets/images/target.png"},
         "goal_image": {"type": "image", "source": "assets/images/portal.png"},
         
-        "level_tilemap": {"type": "tilemap", "source": "assets/maps/bombermanSam.json"}
+        "level_tilemap": {"type": "tilemap", "source": "assets/maps/bombermanSam_232.json"}
     },
     "groups": [
         "targets",
-        "goals",
+        "items",
         "explosions",
         "bombs",
+        "goals",
         "enemies",
         "players",
         "hud"
@@ -24,6 +25,5 @@
         "key": "level_tilemap",
         "tilesets": ["map_tiles"]
     },
-    "next_level": "assets/levels/level2.json",
-    "first_level": true
+    "next_level": "assets/levels/level1.json"
 }

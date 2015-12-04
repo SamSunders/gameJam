@@ -11,7 +11,7 @@ Bomberman.Bomb = function (game_state, name, position, properties) {
     this.game_state.game.physics.arcade.enable(this);
     this.body.immovable = true;
     
-    this.exploding_animation = this.animations.add("exploding", [0, 2, 4], 1, false);
+    this.exploding_animation = this.animations.add("exploding", [0, 1, 2, 3, 4, 5], 1, false);
     this.exploding_animation.onComplete.add(this.kill, this);
     this.animations.play("exploding");
 };

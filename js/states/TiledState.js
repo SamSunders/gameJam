@@ -6,7 +6,8 @@ Bomberman.TiledState = function () {
     
     this.prefab_classes = {
         "player": Bomberman.Player.prototype.constructor,
-        "enemy": Bomberman.Enemy.prototype.constructor
+        "enemy": Bomberman.Enemy.prototype.constructor,
+        "target": Bomberman.Target.prototype.constructor
     };
 };
 
@@ -33,6 +34,10 @@ Bomberman.TiledState.prototype.init = function (level_data) {
         this.map.addTilesetImage(tileset.name, level_data.map.tilesets[tileset_index]);
         tileset_index += 1;
     }, this);
+
+    if (this.level_data.first_level) {
+        localStorage.clear();
+    }
 };
 
 Bomberman.TiledState.prototype.create = function () {
@@ -90,7 +95,13 @@ Bomberman.TiledState.prototype.create_object = function (object) {
 
 Bomberman.TiledState.prototype.game_over = function () {
     "use strict";
-    console.log("GAME OVER!!!!");
     localStorage.clear();
     this.game.state.restart(true, false, this.level_data);
+};
+
+Bomberman.TiledState.prototype.next_level = function () {
+    "use strict";
+    localStorage.number_of_lives = this.prefabs.player.number_of_lives;
+    localStorage.number_of_bombs = this.prefabs.player.number_of_bombs;
+    this.game.state.start("BootState", true, false, this.level_data.next_level, "TiledState");
 };

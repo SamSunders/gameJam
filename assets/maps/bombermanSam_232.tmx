@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="15" height="15" tilewidth="70" tileheight="70">
+ <tileset firstgid="1" name="bomber-spritesheet2" tilewidth="70" tileheight="70">
+  <image source="../images/bomber-spritesheet2.png" width="630" height="350"/>
+ </tileset>
+ <layer name="collision" width="15" height="15">
+  <data encoding="base64" compression="zlib">
+   eJzTZWBg0KUAkwJ0kWh0NiGzcOmlxF5q6MUXJpTYi24+pXpJ0YNPL6n+pZa9pOolNt1SM22QiwFJBBCH
+  </data>
+ </layer>
+ <layer name="Background" width="15" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxTZWBgUCMDq0KxOglYFYlGZxMyC5deSuylhl5VLJga9qKbT6leSuIIm5nE+pda9lKSrmgVR8jqyclDMAwAeOUhqA==
+  </data>
+ </layer>
+ <objectgroup name="objects" width="15" height="15">
+  <object name="enemy1" gid="10" x="211" y="281"/>
+  <object name="enemy2" gid="10" x="209" y="491"/>
+  <object name="enemy3" gid="10" x="769" y="981"/>
+  <object name="enemy4" gid="10" x="910" y="700"/>
+  <object name="target1" gid="42" x="213" y="980"/>
+  <object name="target2" gid="42" x="910" y="279"/>
+  <object name="player" gid="1" x="628" y="561"/>
+ </objectgroup>
+</map>
